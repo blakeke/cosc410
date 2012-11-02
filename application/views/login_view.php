@@ -17,8 +17,8 @@
    <?php echo validation_errors(); ?>
    <?php echo form_open('verifylogin'); ?>
 
-     <label for="username">Username:</label>
-     <input type="text" size="20" id="username" name="username"/>
+     <label for="email">email:</label>
+     <input type="text" size="20" id="email" name="email"/>
 
      <br/>
 
@@ -31,5 +31,9 @@
      <input type="submit" value="Login"/>
 
    </form>
+   
+   <h2> Want to sign up?</h2>
+   <a href= "http://localhost/~kellyblake/cosc410/index.php/form/" >Click here</a>
+       
  </body>
 </html>

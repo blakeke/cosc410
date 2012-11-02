@@ -17,7 +17,7 @@ class VerifyLogin extends CI_Controller {
 
    $this->load->library('form_validation');
    
-   $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+   $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
 
    $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
 
@@ -47,11 +47,11 @@ class VerifyLogin extends CI_Controller {
 
    //Field validation succeeded.  Validate against database
 
-   $username = $this->input->post('username');
+   $email = $this->input->post('email');
 
    //query the database
 
-   $result = $this->user->login($username, $password);
+   $result = $this->user->login($email, $password);
 
 
    if($result)
@@ -66,8 +66,9 @@ class VerifyLogin extends CI_Controller {
 
        $sess_array = array(
 
-         'id' => $row->id,
-         'username' => $row->username
+         //'id' => $row->id,
+         'email' => $row->email,
+         'name'  => $row -> name
        );
        $this->session->set_userdata('logged_in', $sess_array);
      }
@@ -80,7 +81,7 @@ class VerifyLogin extends CI_Controller {
 
    {
 
-     $this->form_validation->set_message('check_database', 'Invalid username or password');
+     $this->form_validation->set_message('check_database', 'Invalid email or password');
 
      return false;
 

@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 
      $session_data = $this->session->userdata('logged_in');
 
-     $data['username'] = $session_data['username'];
+     $data['name'] = $session_data['name'];
 
      $this->load->view('home_view', $data);
      

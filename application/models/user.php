@@ -1,14 +1,21 @@
 <?php
 
 Class User extends CI_Model {
+ 
+  public function __construct()
+ {
+  parent::__construct();
+  $this->load->database();
+ }
 
- function login($username, $password){
 
-   $this -> db -> select('id, username, password');
+ function login($email, $password){
 
-   $this -> db -> from('users');
+   $this -> db -> select( 'email, name, password');
 
-   $this -> db -> where('username = ' . "'" . $username . "'");
+   $this -> db -> from('user');
+
+   $this -> db -> where('email = ' . "'" . ($email) . "'");
 
    $this -> db -> where('password = ' . "'" . ($password) . "'");
 
@@ -23,6 +30,8 @@ Class User extends CI_Model {
      return false;
    }
  }
-}
+   
+ }
+
 
 ?>

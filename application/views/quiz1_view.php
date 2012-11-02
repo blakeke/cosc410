@@ -10,7 +10,7 @@
     
    <h1>Quiz 1</h1>
 
-   <h2>Welcome <?php echo $username; ?>!</h2>
+   <h2>Welcome <?php echo $name; ?>!</h2>
    
    <h3>This is the first Quiz on Personal Finance.</h3>
    

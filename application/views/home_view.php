@@ -12,7 +12,7 @@
     
    <h1>Home</h1>
 
-   <h2>Welcome <?php echo $username; ?>!</h2>
+   <h2>Welcome <?php echo $name; ?>!</h2>
    
    <h3>This is a tutorial to teach Personal Finance to high school students.</h3>
    

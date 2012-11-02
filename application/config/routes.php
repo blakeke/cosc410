@@ -38,9 +38,9 @@
 |
 */
 
+//$route['create'] = 'create';
+$route['form'] = 'form';
 $route['default_controller'] = "login";
-
-
 
 $route['404_override'] = '';
 
